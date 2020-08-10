@@ -52,6 +52,7 @@ _The **Farm Finder** MVP will allow users to create an account (either Farmer or
 |   React Router   | _Framework for delcaritive routing for React components._ |
 | React Bootstrap | _To provide responsive fronted styling_ |
 |     Ruby on Rails      | _Web-app framework for creating MVC databases._ |
+|    Axios     | _To handle calls to the BE._ |
 
 <br>
 
@@ -78,14 +79,14 @@ src
       |__ Header.jsx
       |__ Main.jsx
       |__ Login.jsx
-      |__ Foods.jsx
       |__ Address.jsx
       |__ Search.jsx
       |__ Footer.jsx
-      |__ Map.jsx
-      |__ Farms
-      |__ Food
-      |__ Locations
+      |__ Avatar.jsx
+      |__ Farms.jsx
+      |__ Food.jsx
+      |__ Locations.jsx
+      |__ Navigation.jsx
 |__ services/
       |__ api-helper.js
       |__ foods.js
@@ -96,27 +97,37 @@ src
 
 #### Component Breakdown
 
-> Use this section to go into further depth regarding your components, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
 
 |  Component   |    Type    | state | props | Description                                                      |
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
 |    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._               |
-|  Navigation  | functional |   n   |   n   | _The navigation will provide a link to each of the pages._       |
-|   Gallery    |   class    |   y   |   n   | _The gallery will render the posts using cards in flexbox._      |
-| Gallery Card | functional |   n   |   y   | _The cards will render the post info via props._                 |
-|    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
+|        Main  | class |   y   |   n   | _The main will have host all other components._       |
+|     Login    |   class    |   y   |   n   | _The login will handle user login._      |
+|      Address | functional |   n   |   y   | _The cards will render the post info via props._                 |
+|    Search    | functional |   y   |   y   | _The search will show info the user looks for._ |
+|      Footer  | functional |   n   |   n   | _The footer will will provide common info on each page._       |
+|   Avatar    |   functional    |   n   |   y   | _The avatar will render the the users chosen image._      |
+| Farms | functional |   n   |   y   | _The farms will render the farm info via props._                 |
+|    Food    | functional |   n   |   y   | _The food will render the food info via props._ |
+|  Location  | functional |   n   |   y   | _The location will render the location info via props._       |
 
 #### Time Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
-
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
+|Create BE databases    |   H    |     3 hrs      |        TBD      |       TBD     |
+| Build BE Models |    H     |     3 hrs      |        TBD      |       TBD     |
+| Create CRUD Actions BE   |   H    |     3 hrs      |        TBD      |       TBD     |
+| Build Routes|    H     |     3 hrs      |        TBD      |       TBD     |
+| Build FE framework   |   H    |     5 hrs     |        TBD      |       TBD     |
+| Create CRUD Actions FE |    H     |     3 hrs      |        TBD      |       TBD     |
+| Build Routes|    H     |     3 hrs      |        TBD      |       TBD     |
+| Build FE framework   |    H     |     3 hrs      |        TBD      |       TBD     |
+| Create CRUD Actions FE |    H     |     3 hrs      |        TBD      |       TBD     |
+| Connect FE and BE   |    H    |     3 hrs      |        TBD      |       TBD     |
+| Deploy Site|    H     |     3 hrs      |        TBD      |       TBD     |
+| TOTAL               |          |     35 hrs      |        TBD      |       TBD     |
 
 <br>
 
@@ -124,7 +135,7 @@ src
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
+[ERD Model for The Farm Finder](https://drive.google.com/file/d/1wAqUIdMbSBpykNX2cIWjZ7T9ZDjm6SFJ/view?usp=sharing)
 
 <br>
 
@@ -132,14 +143,17 @@ src
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+- Local storage
+- Farmer user creation
+- Add mapping data
+- Add an external API
+- Create an option for farmers to have ecommerce options
 
 ***
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+- TBD
 
 ## Code Issues & Resolutions
-
-> Use this section to list of all major issues encountered and their resolution.
+-TBD 
