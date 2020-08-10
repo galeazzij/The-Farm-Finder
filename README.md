@@ -85,13 +85,11 @@ src
       |__ Avatar.jsx
       |__ Farms.jsx
       |__ Food.jsx
-      |__ Locations.jsx
       |__ Navigation.jsx
 |__ services/
       |__ api-helper.js
       |__ foods.js
       |__ farms.js
-      |__ locations.js
 
 ```
 
@@ -109,7 +107,6 @@ src
 |   Avatar    |   functional    |   n   |   y   | _The avatar will render the the users chosen image._      |
 | Farms | functional |   n   |   y   | _The farms will render the farm info via props._                 |
 |    Food    | functional |   n   |   y   | _The food will render the food info via props._ |
-|  Location  | functional |   n   |   y   | _The location will render the location info via props._       |
 
 #### Time Estimates
 
