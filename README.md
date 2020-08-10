@@ -79,7 +79,6 @@ src
       |__ Header.jsx
       |__ Main.jsx
       |__ Login.jsx
-      |__ Address.jsx
       |__ Search.jsx
       |__ Footer.jsx
       |__ Avatar.jsx
@@ -101,7 +100,7 @@ src
 |    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._               |
 |        Main  | class |   y   |   n   | _The main will have host all other components._       |
 |     Login    |   class    |   y   |   n   | _The login will handle user login._      |
-|      Address | functional |   n   |   y   | _The cards will render the post info via props._                 |
+|      Navigation | functional |   n   |   y   | _Allows user to navigate throughout the app._                 |
 |    Search    | functional |   y   |   y   | _The search will show info the user looks for._ |
 |      Footer  | functional |   n   |   n   | _The footer will will provide common info on each page._       |
 |   Avatar    |   functional    |   n   |   y   | _The avatar will render the the users chosen image._      |
