@@ -38,6 +38,11 @@ class FoodsController < ApplicationController
     @food.destroy
   end
 
+  def add_farm
+    @food = Food.find(params[:id])
+    @farm = Farm.find(params[:farm_id])
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_food
