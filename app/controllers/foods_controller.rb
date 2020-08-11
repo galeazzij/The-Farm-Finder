@@ -41,6 +41,10 @@ class FoodsController < ApplicationController
   def add_farm
     @food = Food.find(params[:id])
     @farm = Farm.find(params[:farm_id])
+
+    @food.farms << @farm
+
+    render json: @food, include: :farms
   end
 
   private

@@ -44,3 +44,140 @@ Migrating to CreateJoinTableFoodsFarms (20200810224931)
   [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6731752860722644965)[0m
   [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (34.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (7.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "admin"], ["email", "admin@email.com"], ["password_digest", "$2a$12$hr4DiFBmi9wAm4QQhIVqQuBk7R6Wy0WvVgByXM2QPUimo4m/xfpFK"], ["created_at", "2020-08-11 18:05:22.978202"], ["updated_at", "2020-08-11 18:05:22.978202"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Create (20.2ms)[0m  [1m[32mINSERT INTO "foods" ("name", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Carrot"], ["user_id", 1], ["created_at", "2020-08-11 18:05:23.073292"], ["updated_at", "2020-08-11 18:05:23.073292"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFarm Create (1.5ms)[0m  [1m[32mINSERT INTO "farms" ("name", "address", "city", "state", "zipcode", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Scotts Fruit Farm"], ["address", "123 New London Tpk"], ["city", "Glastonbury"], ["state", "CT"], ["zipcode", "06033"], ["phone", "476-908-6753"], ["created_at", "2020-08-11 18:05:23.151753"], ["updated_at", "2020-08-11 18:05:23.151753"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFarm Create (0.4ms)[0m  [1m[32mINSERT INTO "farms" ("name", "address", "city", "state", "zipcode", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Surrey Lane Vinyard Orchard Farm"], ["address", "234 Surrey Lane"], ["city", "Southold"], ["state", ""], ["zipcode", "11960"], ["phone", "916-983-2536"], ["created_at", "2020-08-11 18:05:23.157962"], ["updated_at", "2020-08-11 18:05:23.157962"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFarm Create (0.5ms)[0m  [1m[32mINSERT INTO "farms" ("name", "address", "city", "state", "zipcode", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Uncle Eds Place"], ["address", "456 Brick Kiln Rd"], ["city", "Bridghampton"], ["state", "NY"], ["zipcode", "11963"], ["phone", "873-936-1900"], ["created_at", "2020-08-11 18:05:23.162306"], ["updated_at", "2020-08-11 18:05:23.162306"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFarm Create (0.4ms)[0m  [1m[32mINSERT INTO "farms" ("name", "address", "city", "state", "zipcode", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Duckwalk Vinyards"], ["address", "879 Sagaponack"], ["city", "Southampton"], ["state", "NY"], ["zipcode", "11963"], ["phone", "910-927-9836"], ["created_at", "2020-08-11 18:05:23.167521"], ["updated_at", "2020-08-11 18:05:23.167521"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood::HABTM_Farms Create (7.2ms)[0m  [1m[32mINSERT INTO "farms_foods" ("food_id", "farm_id") VALUES ($1, $2)[0m  [["food_id", 1], ["farm_id", 1]]
+  [1m[36mFood::HABTM_Farms Create (0.5ms)[0m  [1m[32mINSERT INTO "farms_foods" ("food_id", "farm_id") VALUES ($1, $2)[0m  [["food_id", 1], ["farm_id", 3]]
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mFarm Load (0.6ms)[0m  [1m[34mSELECT "farms".* FROM "farms" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mFarm Load (0.5ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFarm::HABTM_Foods Destroy (21.5ms)[0m  [1m[31mDELETE FROM "farms_foods" WHERE "farms_foods"."farm_id" = $1[0m  [["farm_id", 1]]
+  [1m[36mFarm Destroy (6.4ms)[0m  [1m[31mDELETE FROM "farms" WHERE "farms"."id" = $1[0m  [["id", 1]]
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFarm::HABTM_Foods Destroy (1.4ms)[0m  [1m[31mDELETE FROM "farms_foods" WHERE "farms_foods"."farm_id" = $1[0m  [["farm_id", 2]]
+  [1m[36mFarm Destroy (0.3ms)[0m  [1m[31mDELETE FROM "farms" WHERE "farms"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFarm::HABTM_Foods Destroy (0.2ms)[0m  [1m[31mDELETE FROM "farms_foods" WHERE "farms_foods"."farm_id" = $1[0m  [["farm_id", 3]]
+  [1m[36mFarm Destroy (0.3ms)[0m  [1m[31mDELETE FROM "farms" WHERE "farms"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFarm::HABTM_Foods Destroy (0.3ms)[0m  [1m[31mDELETE FROM "farms_foods" WHERE "farms_foods"."farm_id" = $1[0m  [["farm_id", 4]]
+  [1m[36mFarm Destroy (0.4ms)[0m  [1m[31mDELETE FROM "farms" WHERE "farms"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood::HABTM_Farms Destroy (0.2ms)[0m  [1m[31mDELETE FROM "farms_foods" WHERE "farms_foods"."food_id" = $1[0m  [["food_id", 1]]
+  [1m[36mFood Destroy (0.3ms)[0m  [1m[31mDELETE FROM "foods" WHERE "foods"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "admin"], ["email", "admin@email.com"], ["password_digest", "$2a$12$dUV9su.dNNeMQNmw3MM5/eftygizU8ZBpwDdFsYcE5vJZKC9ejg.u"], ["created_at", "2020-08-11 18:16:00.663026"], ["updated_at", "2020-08-11 18:16:00.663026"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Create (0.6ms)[0m  [1m[32mINSERT INTO "foods" ("name", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Carrot"], ["user_id", 2], ["created_at", "2020-08-11 18:16:00.670189"], ["updated_at", "2020-08-11 18:16:00.670189"]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFarm Create (0.3ms)[0m  [1m[32mINSERT INTO "farms" ("name", "address", "city", "state", "zipcode", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Scotts Fruit Farm"], ["address", "123 New London Tpk"], ["city", "Glastonbury"], ["state", "CT"], ["zipcode", "06033"], ["phone", "476-908-6753"], ["created_at", "2020-08-11 18:16:00.681593"], ["updated_at", "2020-08-11 18:16:00.681593"]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFarm Create (0.3ms)[0m  [1m[32mINSERT INTO "farms" ("name", "address", "city", "state", "zipcode", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Surrey Lane Vinyard Orchard Farm"], ["address", "234 Surrey Lane"], ["city", "Southold"], ["state", ""], ["zipcode", "11960"], ["phone", "916-983-2536"], ["created_at", "2020-08-11 18:16:00.691314"], ["updated_at", "2020-08-11 18:16:00.691314"]]
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFarm Create (0.3ms)[0m  [1m[32mINSERT INTO "farms" ("name", "address", "city", "state", "zipcode", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Uncle Eds Place"], ["address", "456 Brick Kiln Rd"], ["city", "Bridghampton"], ["state", "NY"], ["zipcode", "11963"], ["phone", "873-936-1900"], ["created_at", "2020-08-11 18:16:00.699720"], ["updated_at", "2020-08-11 18:16:00.699720"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFarm Create (0.4ms)[0m  [1m[32mINSERT INTO "farms" ("name", "address", "city", "state", "zipcode", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Duckwalk Vinyards"], ["address", "879 Sagaponack"], ["city", "Southampton"], ["state", "NY"], ["zipcode", "11963"], ["phone", "910-927-9836"], ["created_at", "2020-08-11 18:16:00.703434"], ["updated_at", "2020-08-11 18:16:00.703434"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "farms"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood::HABTM_Farms Create (0.3ms)[0m  [1m[32mINSERT INTO "farms_foods" ("food_id", "farm_id") VALUES ($1, $2)[0m  [["food_id", 2], ["farm_id", 5]]
+  [1m[36mFood::HABTM_Farms Create (0.2ms)[0m  [1m[32mINSERT INTO "farms_foods" ("food_id", "farm_id") VALUES ($1, $2)[0m  [["food_id", 2], ["farm_id", 7]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mFarm Load (0.5ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFarm::HABTM_Foods Destroy (0.5ms)[0m  [1m[31mDELETE FROM "farms_foods" WHERE "farms_foods"."farm_id" = $1[0m  [["farm_id", 5]]
+  [1m[36mFarm Destroy (0.3ms)[0m  [1m[31mDELETE FROM "farms" WHERE "farms"."id" = $1[0m  [["id", 5]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFarm::HABTM_Foods Destroy (0.2ms)[0m  [1m[31mDELETE FROM "farms_foods" WHERE "farms_foods"."farm_id" = $1[0m  [["farm_id", 6]]
+  [1m[36mFarm Destroy (0.3ms)[0m  [1m[31mDELETE FROM "farms" WHERE "farms"."id" = $1[0m  [["id", 6]]
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFarm::HABTM_Foods Destroy (0.2ms)[0m  [1m[31mDELETE FROM "farms_foods" WHERE "farms_foods"."farm_id" = $1[0m  [["farm_id", 7]]
+  [1m[36mFarm Destroy (0.3ms)[0m  [1m[31mDELETE FROM "farms" WHERE "farms"."id" = $1[0m  [["id", 7]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFarm::HABTM_Foods Destroy (0.2ms)[0m  [1m[31mDELETE FROM "farms_foods" WHERE "farms_foods"."farm_id" = $1[0m  [["farm_id", 8]]
+  [1m[36mFarm Destroy (0.2ms)[0m  [1m[31mDELETE FROM "farms" WHERE "farms"."id" = $1[0m  [["id", 8]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood::HABTM_Farms Destroy (0.2ms)[0m  [1m[31mDELETE FROM "farms_foods" WHERE "farms_foods"."food_id" = $1[0m  [["food_id", 2]]
+  [1m[36mFood Destroy (0.2ms)[0m  [1m[31mDELETE FROM "foods" WHERE "foods"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "admin"], ["email", "admin@email.com"], ["password_digest", "$2a$12$rZyBn3gJZWh6lggLiwIx1.4xEMMJADDgfudssMsA4U2.R4Crzn0aa"], ["created_at", "2020-08-11 18:19:42.390285"], ["updated_at", "2020-08-11 18:19:42.390285"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Create (0.4ms)[0m  [1m[32mINSERT INTO "foods" ("name", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Carrot"], ["user_id", 3], ["created_at", "2020-08-11 18:19:42.396500"], ["updated_at", "2020-08-11 18:19:42.396500"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFarm Create (0.3ms)[0m  [1m[32mINSERT INTO "farms" ("name", "address", "city", "state", "zipcode", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Scotts Fruit Farm"], ["address", "123 New London Tpk"], ["city", "Glastonbury"], ["state", "CT"], ["zipcode", "06033"], ["phone", "476-908-6753"], ["created_at", "2020-08-11 18:19:42.402277"], ["updated_at", "2020-08-11 18:19:42.402277"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFarm Create (0.2ms)[0m  [1m[32mINSERT INTO "farms" ("name", "address", "city", "state", "zipcode", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Surrey Lane Vinyard Orchard Farm"], ["address", "234 Surrey Lane"], ["city", "Southold"], ["state", ""], ["zipcode", "11960"], ["phone", "916-983-2536"], ["created_at", "2020-08-11 18:19:42.406058"], ["updated_at", "2020-08-11 18:19:42.406058"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFarm Create (0.2ms)[0m  [1m[32mINSERT INTO "farms" ("name", "address", "city", "state", "zipcode", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Uncle Eds Place"], ["address", "456 Brick Kiln Rd"], ["city", "Bridghampton"], ["state", "NY"], ["zipcode", "11963"], ["phone", "873-936-1900"], ["created_at", "2020-08-11 18:19:42.409319"], ["updated_at", "2020-08-11 18:19:42.409319"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFarm Create (0.3ms)[0m  [1m[32mINSERT INTO "farms" ("name", "address", "city", "state", "zipcode", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Duckwalk Vinyards"], ["address", "879 Sagaponack"], ["city", "Southampton"], ["state", "NY"], ["zipcode", "11963"], ["phone", "910-927-9836"], ["created_at", "2020-08-11 18:19:42.412693"], ["updated_at", "2020-08-11 18:19:42.412693"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "farms"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood::HABTM_Farms Create (0.2ms)[0m  [1m[32mINSERT INTO "farms_foods" ("food_id", "farm_id") VALUES ($1, $2)[0m  [["food_id", 3], ["farm_id", 9]]
+  [1m[36mFood::HABTM_Farms Create (0.3ms)[0m  [1m[32mINSERT INTO "farms_foods" ("food_id", "farm_id") VALUES ($1, $2)[0m  [["food_id", 3], ["farm_id", 11]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFarm Load (0.3ms)[0m  [1m[34mSELECT "farms".* FROM "farms" LIMIT $1[0m  [["LIMIT", 11]]
