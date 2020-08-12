@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 
 export default function Header() {
   return (
-    <div>
+    <header>
       <h1>The Farm Finder</h1>
-      <Link>Login/Register</Link>
-    </div>
+      <Link to='/login'>Login/Register</Link>
+    </header>
   )
 }
