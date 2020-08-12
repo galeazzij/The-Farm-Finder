@@ -587,3 +587,36 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 25ms (Views: 18.3ms | ActiveRecord: 0.0ms | Allocations: 2711)
 
 
+Started POST "/auth/login" for ::1 at 2020-08-12 16:48:38 -0400
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"admin", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (17.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 333ms (Views: 0.4ms | ActiveRecord: 53.1ms | Allocations: 7523)
+
+
+Started POST "/auth/login" for ::1 at 2020-08-12 16:49:26 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"admin", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 267ms (Views: 0.2ms | ActiveRecord: 2.5ms | Allocations: 1021)
+
+
+Started POST "/auth/login" for ::1 at 2020-08-12 17:02:25 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"admin", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 259ms (Views: 0.3ms | ActiveRecord: 2.4ms | Allocations: 1102)
+
+
+Started POST "/auth/login" for ::1 at 2020-08-12 17:02:27 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"admin", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 267ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 1018)
+
+
