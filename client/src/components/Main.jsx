@@ -62,6 +62,7 @@ export default function Main(props) {
        <Route path='/foods/:id' render={(props) =>
         (<FoodItem 
           {...props}
+          farms={farms}
         />
         )} />
     </main>

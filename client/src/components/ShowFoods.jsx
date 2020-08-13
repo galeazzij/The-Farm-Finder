@@ -6,7 +6,7 @@ export default function ShowFoods(props) {
     <div>
       <h3>Foods</h3>
       {props.foods.map((foodItem)=>(
-      <Link>{foodItem.name}</Link>
+      <Link to={`/foods/${foodItem.id}`}>{foodItem.name}</Link>
       ))}
       <Link to='/foods/new'><button>Create</button></Link>
     </div>
