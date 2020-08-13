@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import {loginUser} from '../services/auth'
+import React, {useState} from 'react'
+import { registerUser } from '../services/auth';
 
-export default function Login(props) {
+export default function Register(props) {
   const [formData, setFormData] = useState({
     username: "",
+    email: "",
     password: "",
   });
 
@@ -18,20 +18,30 @@ export default function Login(props) {
 
   const handleSubmit= async (e) => {
     e.preventDefault();
-    const userData = await loginUser(formData);
+    const userData = await registerUser(formData);
     props.setCurrentUser(userData)
     props.history.push('/')
   }
 
   return (
     <form onSubmit={handleSubmit}>
-      <h3>Login</h3>
+      <h3>Register</h3>
       <label>
         Username:
         <input
           type="text"
           name="username"
           value={formData.username}
+          onChange={handleChange}
+        />
+      </label>
+
+      <label>
+        Email:
+        <input
+          type="text"
+          name="email"
+          value={formData.email}
           onChange={handleChange}
         />
       </label>
@@ -45,8 +55,6 @@ export default function Login(props) {
           onChange={handleChange}
         />
       </label>
-
-      <Link to='/register'>Register</Link>
       <button>Submit</button>
     </form>
   );
