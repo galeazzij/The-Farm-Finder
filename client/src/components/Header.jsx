@@ -26,6 +26,15 @@ export default function Header(props) {
         )
 
       }
+
+      <hr />
+     { props.currentUser && (
+      <>
+        <Link to="/foods">Foods</Link>
+        <Link to="/farms">Farms</Link>
+      </>
+      )
+      }
     </header>
   )
 }
