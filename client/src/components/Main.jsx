@@ -8,6 +8,7 @@ import ShowFoods from "./ShowFoods";
 import { readAllFoods } from "../services/foods";
 import CreateFood from "./CreateFood";
 import FoodItem from "./FoodItem";
+import UpdateFood from "./UpdateFood";
 
 export default function Main(props) {
   const { setCurrentUser } = props;
@@ -50,19 +51,27 @@ export default function Main(props) {
        <Route exact path='/foods' render={() =>
         (<ShowFoods 
           foods={foods}
+          setFoods={setFoods}
         />
         )} />
        <Route path='/foods/new' render={(props) =>
         (<CreateFood 
           {...props}
-          setFoods={setFoods}
+          
           foods={foods}
         />
         )} />
-       <Route path='/foods/:id' render={(props) =>
+       <Route exact path='/foods/:id' render={(props) =>
         (<FoodItem 
           {...props}
           farms={farms}
+        />
+        )} />
+       <Route path='/foods/:id/edit' render={(props) =>
+        (<UpdateFood
+          {...props}
+          setFoods={setFoods}
+          foods={foods}
         />
         )} />
     </main>
