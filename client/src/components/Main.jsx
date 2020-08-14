@@ -9,7 +9,6 @@ import { readAllFoods } from "../services/foods";
 import CreateFood from "./CreateFood";
 import FoodItem from "./FoodItem";
 import UpdateFood from "./UpdateFood";
-import ShowOneFarm from "./ShowOneFarm";
 
 export default function Main(props) {
   const { setCurrentUser } = props;
@@ -44,14 +43,8 @@ export default function Main(props) {
           setCurrentUser={setCurrentUser}
         />
         )} />
-       <Route exact path='/farms' render={() =>
+       <Route path='/farms' render={() =>
         (<ShowFarms 
-          farms={farms}
-        />
-        )} />
-       <Route exact path='/farms/:id' render={(props) =>
-        (<ShowOneFarm 
-          {...props}
           farms={farms}
         />
         )} />
@@ -64,7 +57,7 @@ export default function Main(props) {
        <Route path='/foods/new' render={(props) =>
         (<CreateFood 
           {...props}
-          setFoods={setFoods}
+          
           foods={foods}
         />
         )} />
