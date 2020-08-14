@@ -9,7 +9,7 @@ import { readAllFoods } from "../services/foods";
 import CreateFood from "./CreateFood";
 import FoodItem from "./FoodItem";
 import UpdateFood from "./UpdateFood";
-import bootstrap from 'react-bootstrap'
+import ShowOneFarm from "./ShowOneFarm";
 
 export default function Main(props) {
   const { setCurrentUser } = props;
@@ -44,8 +44,14 @@ export default function Main(props) {
           setCurrentUser={setCurrentUser}
         />
         )} />
-       <Route path='/farms' render={() =>
+       <Route exact path='/farms' render={() =>
         (<ShowFarms 
+          farms={farms}
+        />
+        )} />
+       <Route exact path='/farms/:id' render={(props) =>
+        (<ShowOneFarm 
+          {...props}
           farms={farms}
         />
         )} />
