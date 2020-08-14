@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import Header from './components/Header'
 import Main from './components/Main'
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { verifyUser } from './services/auth';
+import NavBar from './components/NavBar';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -20,6 +21,10 @@ function App() {
   return (
     <div className="App">
       <Header
+        currentUser={currentUser}
+        setCurrentUser={setCurrentUser}
+      />
+      <NavBar
         currentUser={currentUser}
         setCurrentUser={setCurrentUser}
       />

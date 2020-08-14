@@ -9,6 +9,7 @@ import { readAllFoods } from "../services/foods";
 import CreateFood from "./CreateFood";
 import FoodItem from "./FoodItem";
 import UpdateFood from "./UpdateFood";
+import bootstrap from 'react-bootstrap'
 
 export default function Main(props) {
   const { setCurrentUser } = props;
