@@ -57,7 +57,7 @@ export default function Main(props) {
        <Route path='/foods/new' render={(props) =>
         (<CreateFood 
           {...props}
-          
+          setFoods={setFoods}
           foods={foods}
         />
         )} />
