@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import food from '../images/food_image.jpg'
+import farm from '../images/farm_image.jpg'
 import { Link } from "react-router-dom";
 
 import { Container, Col, Row, Card, Button, CardDeck } from "react-bootstrap";
@@ -22,7 +24,7 @@ export default function Home(props) {
         <>
           <CardDeck>
             <Card style={{ width: "18rem" }}>
-              <Card.Img variant="top" src="holder.js/100px180" />
+              <Card.Img variant="top" src={food} />
               <Card.Body>
                 <Card.Title>Foods</Card.Title>
                 <Card.Text>
@@ -38,7 +40,7 @@ export default function Home(props) {
             </Card>
 
             <Card style={{ width: "18rem" }}>
-              <Card.Img variant="top" src="holder.js/100px180" />
+              <Card.Img variant="top" src={farm} />
               <Card.Body>
                 <Card.Title>Farms</Card.Title>
                 <Card.Text>
