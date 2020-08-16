@@ -3,7 +3,7 @@ import food from '../images/food_image.jpg'
 import farm from '../images/farm_image.jpg'
 import { Link } from "react-router-dom";
 
-import { Container, Col, Row, Card, Button, CardDeck } from "react-bootstrap";
+import { Container, Card, Button, CardDeck } from "react-bootstrap";
 import { verifyUser } from "../services/auth";
 
 export default function Home(props) {
