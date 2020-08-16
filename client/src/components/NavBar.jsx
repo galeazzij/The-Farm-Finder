@@ -1,10 +1,5 @@
 import React from 'react'
-import {Navbar} from 'react-bootstrap'
-import {Nav} from 'react-bootstrap'
-import {NavDropdown} from 'react-bootstrap'
-import {Form} from 'react-bootstrap'
-import {FormControl} from 'react-bootstrap'
-import {Button} from 'react-bootstrap'
+import {Navbar, Nav, NavDropdown, Form, FormControl, Button} from 'react-bootstrap'
 
 
 
@@ -16,7 +11,7 @@ export default function NavBar() {
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
-      <Nav.Link href="/login">Home</Nav.Link>
+      <Nav.Link href="/">Home</Nav.Link>
       <Nav.Link href="#link">Link</Nav.Link>
       <NavDropdown title="Dropdown" id="basic-nav-dropdown">
         <NavDropdown.Item href="/foods">Food</NavDropdown.Item>

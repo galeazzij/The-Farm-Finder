@@ -10,9 +10,10 @@ import CreateFood from "./CreateFood";
 import FoodItem from "./FoodItem";
 import UpdateFood from "./UpdateFood";
 import ShowOneFarm from "./ShowOneFarm";
+import Home from "../screens/Home";
 
 export default function Main(props) {
-  const { setCurrentUser } = props;
+  const { currentUser, setCurrentUser } = props;
 
   const [farms, setFarms] = useState([]);
   const [foods, setFoods] = useState([]);
@@ -34,6 +35,12 @@ export default function Main(props) {
 
   return (
     <main>
+      <Route exact path='/' render={(props) =>
+        (<Home {...props}
+          currentUser={currentUser}
+          setCurrentUser={setCurrentUser}
+        />
+        )} />
       <Route path='/login' render={(props) =>
         (<Login {...props}
           setCurrentUser={setCurrentUser}
