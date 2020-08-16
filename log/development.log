@@ -15310,3 +15310,2279 @@ Processing by AuthenticationController#verify as HTML
 Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 12.9ms | Allocations: 874)
 
 
+Started GET "/foods" for ::1 at 2020-08-15 12:02:13 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 12:02:13 -0400
+Started GET "/farms" for ::1 at 2020-08-15 12:02:13 -0400
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FarmsController#index as HTML
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFarm Load (10.8ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+  [1m[35m (8.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (2.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 87ms (Views: 29.9ms | ActiveRecord: 38.1ms | Allocations: 19103)
+
+
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 68ms (Views: 0.6ms | ActiveRecord: 46.8ms | Allocations: 19571)
+
+
+Completed 200 OK in 53ms (Views: 14.6ms | ActiveRecord: 27.5ms | Allocations: 19366)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 12:02:17 -0400
+Started GET "/foods" for ::1 at 2020-08-15 12:02:17 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 12:02:17 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFood Load (2.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  [1m[36mFarm Load (3.7ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 2.2ms | Allocations: 2512)
+
+
+Completed 200 OK in 8ms (Views: 3.9ms | ActiveRecord: 3.7ms | Allocations: 3837)
+
+
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 8.2ms | Allocations: 4066)
+
+
+Started GET "/farms/13" for ::1 at 2020-08-15 12:02:19 -0400
+Processing by FarmsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mFarm Load (0.5ms)[0m  [1m[34mSELECT "farms".* FROM "farms" WHERE "farms"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/farms_controller.rb:44:in `set_farm'
+Completed 200 OK in 18ms (Views: 0.8ms | ActiveRecord: 0.5ms | Allocations: 949)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 12:02:22 -0400
+Started GET "/foods" for ::1 at 2020-08-15 12:02:22 -0400
+Processing by FarmsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-08-15 12:02:22 -0400
+  [1m[36mFarm Load (201.2ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+Processing by FoodsController#index as HTML
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 206ms (Views: 4.2ms | ActiveRecord: 201.2ms | Allocations: 2479)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFood Load (7.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 10ms (Views: 2.0ms | ActiveRecord: 7.6ms | Allocations: 2890)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 2335)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 12:10:38 -0400
+Started GET "/foods" for ::1 at 2020-08-15 12:10:39 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 12:10:39 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (2.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 2.3ms | Allocations: 2884)
+
+
+Processing by FarmsController#index as HTML
+  [1m[36mFarm Load (1.2ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 1.2ms | Allocations: 1617)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 7.1ms | Allocations: 962)
+
+
+Started PUT "/foods/16" for ::1 at 2020-08-15 12:11:06 -0400
+Processing by FoodsController#update as HTML
+  Parameters: {"food"=>{"name"=>"Honey"}, "id"=>"16"}
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:56:in `set_food'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:31:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:31:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/foods_controller.rb:31:in `update'
+Completed 200 OK in 20ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 7169)
+
+
+Started GET "/foods/new" for ::1 at 2020-08-15 12:11:09 -0400
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mFood Load (0.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:56:in `set_food'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.8ms | Allocations: 660)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Food with 'id'=new):
+  
+app/controllers/foods_controller.rb:56:in `set_food'
+Started GET "/farms" for ::1 at 2020-08-15 12:12:28 -0400
+Started GET "/foods" for ::1 at 2020-08-15 12:12:28 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 12:12:28 -0400
+Processing by FoodsController#index as HTML
+Processing by FarmsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFood Load (1.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  [1m[36mFarm Load (1.1ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 1.4ms | Allocations: 2261)
+
+
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 1.1ms | Allocations: 2965)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 4.0ms | Allocations: 3924)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 12:21:36 -0400
+Started GET "/foods" for ::1 at 2020-08-15 12:21:36 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 12:21:36 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (1.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+Processing by FarmsController#index as HTML
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 1.4ms | Allocations: 2493)
+
+
+  [1m[36mFarm Load (5.1ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+Completed 200 OK in 9ms (Views: 3.1ms | ActiveRecord: 5.1ms | Allocations: 2672)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 3.8ms | Allocations: 2880)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 12:24:55 -0400
+Started GET "/foods" for ::1 at 2020-08-15 12:24:55 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FarmsController#index as HTML
+  [1m[35m (8.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FoodsController#index as HTML
+  [1m[36mFarm Load (21.2ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+  [1m[36mFood Load (5.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 58ms (Views: 29.8ms | ActiveRecord: 17.3ms | Allocations: 8436)
+
+
+Completed 200 OK in 98ms (Views: 35.8ms | ActiveRecord: 47.6ms | Allocations: 18937)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 16:48:20 -0400
+Started GET "/foods" for ::1 at 2020-08-15 16:48:20 -0400
+Processing by FarmsController#index as HTML
+  [1m[36mFarm Load (1.0ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 1.0ms | Allocations: 1631)
+
+
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 1.0ms | Allocations: 1339)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 16:48:42 -0400
+Started GET "/foods" for ::1 at 2020-08-15 16:48:42 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+  [1m[36mFarm Load (16.4ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 3.1ms | ActiveRecord: 16.4ms | Allocations: 2056)
+
+
+  [1m[36mFood Load (18.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 22ms (Views: 3.0ms | ActiveRecord: 18.8ms | Allocations: 2995)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 16:48:52 -0400
+Started GET "/foods" for ::1 at 2020-08-15 16:48:52 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  [1m[36mFarm Load (1.0ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms | Allocations: 1943)
+
+
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 1.0ms | Allocations: 2893)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 16:49:25 -0400
+Started GET "/foods" for ::1 at 2020-08-15 16:49:25 -0400
+Processing by FoodsController#index as HTML
+Processing by FarmsController#index as HTML
+  [1m[36mFood Load (3.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 2.4ms | ActiveRecord: 3.3ms | Allocations: 1756)
+
+
+  [1m[36mFarm Load (15.3ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 19ms (Views: 3.5ms | ActiveRecord: 15.3ms | Allocations: 2986)
+
+
+Started GET "/foods" for ::1 at 2020-08-15 16:49:56 -0400
+Started GET "/farms" for ::1 at 2020-08-15 16:49:56 -0400
+Processing by FarmsController#index as HTML
+  [1m[36mFarm Load (0.5ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms | Allocations: 1559)
+
+
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms | Allocations: 1300)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 17:08:05 -0400
+Started GET "/foods" for ::1 at 2020-08-15 17:08:05 -0400
+Processing by FoodsController#index as HTML
+Processing by FarmsController#index as HTML
+  [1m[36mFarm Load (1.1ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 1.1ms | Allocations: 1617)
+
+
+  [1m[36mFood Load (11.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 13ms (Views: 2.0ms | ActiveRecord: 11.2ms | Allocations: 3580)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 17:08:27 -0400
+Started GET "/foods" for ::1 at 2020-08-15 17:08:27 -0400
+Processing by FoodsController#index as HTML
+Processing by FarmsController#index as HTML
+  [1m[36mFarm Load (0.4ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+  [1m[36mFood Load (2.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.4ms | Allocations: 1580)
+
+
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 2.0ms | Allocations: 3042)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 17:17:13 -0400
+Started GET "/foods" for ::1 at 2020-08-15 17:17:13 -0400
+Processing by FarmsController#index as HTML
+  [1m[36mFarm Load (0.7ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.7ms | Allocations: 1617)
+
+
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 1.0ms | Allocations: 1339)
+
+
+Started POST "/auth/login" for ::1 at 2020-08-15 17:17:36 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"admin", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 280ms (Views: 0.2ms | ActiveRecord: 8.0ms | Allocations: 6757)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 17:21:41 -0400
+Started GET "/foods" for ::1 at 2020-08-15 17:21:41 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (1.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 1.5ms | Allocations: 1392)
+
+
+Started GET "/auth/verify" for ::1 at 2020-08-15 17:21:41 -0400
+Processing by FarmsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFarm Load (0.6ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.6ms | Allocations: 2075)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 47ms (Views: 0.4ms | ActiveRecord: 42.0ms | Allocations: 2706)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 17:21:43 -0400
+Processing by FarmsController#index as HTML
+  [1m[36mFarm Load (1.1ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 1.1ms | Allocations: 1587)
+
+
+Started GET "/foods" for ::1 at 2020-08-15 17:21:43 -0400
+Processing by FoodsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-08-15 17:21:43 -0400
+  [1m[36mFood Load (1.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 1.5ms | Allocations: 1616)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 879)
+
+
+Started GET "/foods" for ::1 at 2020-08-15 17:21:44 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 17:21:44 -0400
+Started GET "/farms" for ::1 at 2020-08-15 17:21:44 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 875)
+
+
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (4.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 2.3ms | ActiveRecord: 4.0ms | Allocations: 1281)
+
+
+Processing by FarmsController#index as HTML
+  [1m[36mFarm Load (0.9ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.9ms | Allocations: 1617)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 17:21:52 -0400
+Started GET "/foods" for ::1 at 2020-08-15 17:21:52 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 17:21:52 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFarm Load (1.9ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mFood Load (1.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 1.9ms | Allocations: 2112)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 3152)
+
+
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 1.6ms | Allocations: 3852)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 17:21:56 -0400
+Started GET "/foods" for ::1 at 2020-08-15 17:21:56 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 17:21:56 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFarm Load (3.5ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  [1m[36mFood Load (2.9ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 11ms (Views: 6.9ms | ActiveRecord: 3.5ms | Allocations: 3249)
+
+
+Completed 200 OK in 10ms (Views: 7.2ms | ActiveRecord: 2.9ms | Allocations: 3139)
+
+
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 13ms (Views: 0.5ms | ActiveRecord: 4.6ms | Allocations: 4023)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 17:22:09 -0400
+Started GET "/foods" for ::1 at 2020-08-15 17:22:09 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 17:22:09 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 3.6ms | Allocations: 874)
+
+
+  [1m[36mFood Load (153.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+  [1m[36mFarm Load (168.2ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+Completed 200 OK in 157ms (Views: 2.6ms | ActiveRecord: 153.7ms | Allocations: 2816)
+
+
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 173ms (Views: 4.9ms | ActiveRecord: 168.2ms | Allocations: 4922)
+
+
+Started GET "/foods" for ::1 at 2020-08-15 17:22:14 -0400
+Started GET "/farms" for ::1 at 2020-08-15 17:22:14 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 17:22:14 -0400
+Processing by FarmsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by FoodsController#index as HTML
+  [1m[36mFarm Load (27.9ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 31ms (Views: 3.0ms | ActiveRecord: 27.9ms | Allocations: 2586)
+
+
+  [1m[36mUser Load (32.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 35ms (Views: 0.3ms | ActiveRecord: 32.8ms | Allocations: 3069)
+
+
+  [1m[36mFood Load (37.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 40ms (Views: 1.6ms | ActiveRecord: 37.8ms | Allocations: 3964)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 17:22:18 -0400
+Started GET "/foods" for ::1 at 2020-08-15 17:22:18 -0400
+Processing by FarmsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-08-15 17:22:18 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFarm Load (2.1ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 2.1ms | Allocations: 2268)
+
+
+  [1m[36mFood Load (1.9ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 1.9ms | Allocations: 3301)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.7ms | Allocations: 1152)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 17:22:22 -0400
+Started GET "/foods" for ::1 at 2020-08-15 17:22:22 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 17:22:22 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFarm Load (2.0ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 2.0ms | Allocations: 2577)
+
+
+  [1m[36mFood Load (8.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 10ms (Views: 1.8ms | ActiveRecord: 8.5ms | Allocations: 3520)
+
+
+  [1m[36mUser Load (11.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 11.7ms | Allocations: 3989)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 17:27:43 -0400
+Started GET "/foods" for ::1 at 2020-08-15 17:27:43 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+  [1m[36mFarm Load (2.1ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+Started GET "/auth/verify" for ::1 at 2020-08-15 17:27:43 -0400
+  [1m[36mFood Load (1.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 2.1ms | Allocations: 3017)
+
+
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 1.8ms | Allocations: 3196)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 874)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 17:27:50 -0400
+Started GET "/foods" for ::1 at 2020-08-15 17:27:50 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 17:27:50 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFarm Load (3.1ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  [1m[36mFood Load (2.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 2.6ms | Allocations: 2342)
+
+
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 12ms (Views: 8.1ms | ActiveRecord: 3.1ms | Allocations: 4049)
+
+
+Completed 200 OK in 11ms (Views: 0.5ms | ActiveRecord: 4.7ms | Allocations: 3731)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 17:28:27 -0400
+Started GET "/foods" for ::1 at 2020-08-15 17:28:27 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 17:28:27 -0400
+Processing by FarmsController#index as HTML
+  [1m[36mFarm Load (0.4ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.4ms | Allocations: 1559)
+
+
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFood Load (6.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 11ms (Views: 4.1ms | ActiveRecord: 6.7ms | Allocations: 2297)
+
+
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 4.3ms | Allocations: 2081)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 17:28:36 -0400
+Started GET "/foods" for ::1 at 2020-08-15 17:28:36 -0400
+Processing by FarmsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-08-15 17:28:36 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFarm Load (5.9ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+  [1m[36mFood Load (1.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+Completed 200 OK in 10ms (Views: 3.7ms | ActiveRecord: 5.9ms | Allocations: 2937)
+
+
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 1.5ms | Allocations: 3316)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 3.5ms | Allocations: 3292)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 17:28:45 -0400
+Started GET "/foods" for ::1 at 2020-08-15 17:28:45 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 17:28:45 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by FoodsController#index as HTML
+Processing by FarmsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mFood Load (1.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  [1m[36mFarm Load (2.1ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 1137)
+
+
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 1.6ms | Allocations: 2971)
+
+
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 2.1ms | Allocations: 3648)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 17:28:48 -0400
+Started GET "/foods" for ::1 at 2020-08-15 17:28:48 -0400
+Processing by FarmsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-08-15 17:28:48 -0400
+  [1m[36mFarm Load (1.5ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 1.5ms | Allocations: 1781)
+
+
+Processing by AuthenticationController#verify as HTML
+Processing by FoodsController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mFood Load (2.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 1088)
+
+
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 4.7ms | ActiveRecord: 2.8ms | Allocations: 2248)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 17:29:16 -0400
+Started GET "/foods" for ::1 at 2020-08-15 17:29:16 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 17:29:16 -0400
+Processing by FarmsController#index as HTML
+  [1m[36mFarm Load (0.6ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms | Allocations: 1559)
+
+
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (15.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 22ms (Views: 6.5ms | ActiveRecord: 15.3ms | Allocations: 1822)
+
+
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 2.2ms | Allocations: 1639)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 17:29:45 -0400
+Started GET "/foods" for ::1 at 2020-08-15 17:29:45 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 17:29:45 -0400
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by FarmsController#index as HTML
+  [1m[36mFood Load (45.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 50ms (Views: 3.4ms | ActiveRecord: 45.8ms | Allocations: 2305)
+
+
+  [1m[36mUser Load (50.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mFarm Load (40.6ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 55ms (Views: 0.7ms | ActiveRecord: 50.3ms | Allocations: 3441)
+
+
+Completed 200 OK in 69ms (Views: 28.4ms | ActiveRecord: 40.6ms | Allocations: 3744)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 17:29:46 -0400
+Started GET "/foods" for ::1 at 2020-08-15 17:29:46 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 17:29:46 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.4ms | Allocations: 1834)
+
+
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 1587)
+
+
+Processing by FarmsController#index as HTML
+  [1m[36mFarm Load (0.5ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.5ms | Allocations: 1559)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 17:34:25 -0400
+Started GET "/foods" for ::1 at 2020-08-15 17:34:25 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 17:34:25 -0400
+Processing by FarmsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by FoodsController#index as HTML
+  [1m[36mFarm Load (1.7ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+  [1m[36mFood Load (1.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 1.7ms | Allocations: 2703)
+
+
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 3498)
+
+
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 1.1ms | Allocations: 3504)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 17:34:52 -0400
+Started GET "/foods" for ::1 at 2020-08-15 17:34:52 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 17:34:52 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+  [1m[36mFarm Load (24.0ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 29ms (Views: 4.4ms | ActiveRecord: 24.0ms | Allocations: 2215)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFood Load (31.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 35ms (Views: 3.3ms | ActiveRecord: 31.5ms | Allocations: 3529)
+
+
+  [1m[36mUser Load (22.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 26ms (Views: 0.7ms | ActiveRecord: 22.0ms | Allocations: 2367)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 17:35:15 -0400
+Started GET "/foods" for ::1 at 2020-08-15 17:35:15 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 17:35:15 -0400
+Processing by FarmsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by FoodsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mFarm Load (2.5ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 1652)
+
+
+  [1m[36mFood Load (6.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 2.5ms | Allocations: 2584)
+
+
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 10ms (Views: 3.9ms | ActiveRecord: 6.1ms | Allocations: 3964)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 17:37:15 -0400
+Started GET "/foods" for ::1 at 2020-08-15 17:37:15 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 17:37:15 -0400
+Processing by FarmsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by FoodsController#index as HTML
+  [1m[36mFarm Load (2.3ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mFood Load (3.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 2.3ms | Allocations: 3072)
+
+
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 2510)
+
+
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 3.8ms | Allocations: 3813)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 17:37:21 -0400
+Started GET "/foods" for ::1 at 2020-08-15 17:37:21 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 17:37:21 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFarm Load (1.4ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  [1m[36mFood Load (0.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.8ms | Allocations: 3174)
+
+
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 1.4ms | Allocations: 2880)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 2.3ms | Allocations: 3910)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 17:37:41 -0400
+Started GET "/foods" for ::1 at 2020-08-15 17:37:41 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 17:37:41 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFarm Load (313.1ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 316ms (Views: 2.5ms | ActiveRecord: 313.1ms | Allocations: 2586)
+
+
+  [1m[36mFood Load (30.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 34ms (Views: 2.9ms | ActiveRecord: 30.4ms | Allocations: 3529)
+
+
+  [1m[36mUser Load (24.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 28ms (Views: 0.3ms | ActiveRecord: 24.9ms | Allocations: 4009)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 17:37:56 -0400
+Started GET "/foods" for ::1 at 2020-08-15 17:37:56 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 17:37:56 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFarm Load (4.5ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mFood Load (3.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+Completed 200 OK in 8ms (Views: 2.8ms | ActiveRecord: 4.5ms | Allocations: 2640)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 3178)
+
+
+Completed 200 OK in 10ms (Views: 5.4ms | ActiveRecord: 3.8ms | Allocations: 4265)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 17:38:07 -0400
+Started GET "/foods" for ::1 at 2020-08-15 17:38:07 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+  [1m[36mFarm Load (1.6ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 1.6ms | Allocations: 2708)
+
+
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.3ms | Allocations: 2797)
+
+
+Started GET "/auth/verify" for ::1 at 2020-08-15 17:38:07 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 874)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 17:40:44 -0400
+Started GET "/foods" for ::1 at 2020-08-15 17:40:44 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 17:40:44 -0400
+Processing by FarmsController#index as HTML
+  [1m[36mFarm Load (0.4ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.4ms | Allocations: 1559)
+
+
+Processing by AuthenticationController#verify as HTML
+Processing by FoodsController#index as HTML
+  [1m[36mUser Load (61.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+Completed 200 OK in 65ms (Views: 0.3ms | ActiveRecord: 61.6ms | Allocations: 1381)
+
+
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 1.0ms | Allocations: 2150)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 17:40:49 -0400
+Started GET "/foods" for ::1 at 2020-08-15 17:40:49 -0400
+Processing by FarmsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-08-15 17:40:49 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFarm Load (1.9ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+  [1m[36mFood Load (2.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 1.9ms | Allocations: 2335)
+
+
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 2.7ms | Allocations: 2922)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 932)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 17:40:54 -0400
+Started GET "/foods" for ::1 at 2020-08-15 17:40:54 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 17:40:54 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFarm Load (1.5ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  [1m[36mFood Load (1.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 1.5ms | Allocations: 2884)
+
+
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 1.1ms | Allocations: 3340)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 2.8ms | Allocations: 3844)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 17:52:48 -0400
+Started GET "/foods" for ::1 at 2020-08-15 17:52:48 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 17:52:48 -0400
+Processing by FarmsController#index as HTML
+  [1m[36mFarm Load (0.9ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+Processing by FoodsController#index as HTML
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.9ms | Allocations: 3385)
+
+
+  [1m[36mFood Load (3.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 3.0ms | Allocations: 2964)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 1.6ms | Allocations: 1183)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 17:53:48 -0400
+Started GET "/foods" for ::1 at 2020-08-15 17:53:48 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 17:53:48 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFarm Load (2.9ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  [1m[36mFood Load (1.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 2.9ms | Allocations: 3242)
+
+
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 1.8ms | Allocations: 3301)
+
+
+  [1m[36mUser Load (19.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 51ms (Views: 0.2ms | ActiveRecord: 23.7ms | Allocations: 4041)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 18:04:25 -0400
+Started GET "/foods" for ::1 at 2020-08-15 18:04:25 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 18:04:25 -0400
+Processing by FoodsController#index as HTML
+Processing by FarmsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFarm Load (1.1ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 1.1ms | Allocations: 1990)
+
+
+  [1m[36mFood Load (7.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 12ms (Views: 3.7ms | ActiveRecord: 7.7ms | Allocations: 6700)
+
+
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 3.7ms | Allocations: 4208)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 18:04:47 -0400
+Started GET "/foods" for ::1 at 2020-08-15 18:04:47 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 18:04:47 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+  [1m[36mFarm Load (1.9ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFood Load (2.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 1.9ms | Allocations: 3254)
+
+
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 2.2ms | Allocations: 3298)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 6.2ms | Allocations: 3307)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 18:04:55 -0400
+Started GET "/foods" for ::1 at 2020-08-15 18:04:55 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 18:04:55 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFarm Load (4.0ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 3.7ms | ActiveRecord: 4.0ms | Allocations: 2586)
+
+
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mFood Load (5.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 3.9ms | Allocations: 3270)
+
+
+Completed 200 OK in 12ms (Views: 4.8ms | ActiveRecord: 5.5ms | Allocations: 4053)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 18:06:09 -0400
+Started GET "/foods" for ::1 at 2020-08-15 18:06:09 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 18:06:09 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFarm Load (4.4ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 3.2ms | ActiveRecord: 4.4ms | Allocations: 2586)
+
+
+  [1m[36mUser Load (9.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mFood Load (10.9ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 13ms (Views: 0.4ms | ActiveRecord: 9.5ms | Allocations: 3244)
+
+
+Completed 200 OK in 15ms (Views: 3.6ms | ActiveRecord: 10.9ms | Allocations: 4275)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 18:06:57 -0400
+Started GET "/foods" for ::1 at 2020-08-15 18:06:57 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 18:06:57 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFarm Load (1.3ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+  [1m[36mFood Load (2.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 1.3ms | Allocations: 2245)
+
+
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 2.1ms | Allocations: 3295)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 8.3ms | Allocations: 4020)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 18:07:17 -0400
+Started GET "/foods" for ::1 at 2020-08-15 18:07:17 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 18:07:17 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+  [1m[36mFarm Load (2.2ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 2.2ms | Allocations: 2046)
+
+
+  [1m[36mFood Load (3.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 9ms (Views: 4.6ms | ActiveRecord: 3.8ms | Allocations: 3298)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 1113)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 18:07:20 -0400
+Started GET "/foods" for ::1 at 2020-08-15 18:07:20 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 18:07:20 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFarm Load (1.4ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+  [1m[36mFood Load (1.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 1.4ms | Allocations: 2266)
+
+
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 1.8ms | Allocations: 3572)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 3872)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 18:11:30 -0400
+Started GET "/foods" for ::1 at 2020-08-15 18:11:30 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 18:11:30 -0400
+Processing by FoodsController#index as HTML
+Processing by FarmsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFood Load (7.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  [1m[36mFarm Load (7.0ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 3.3ms | ActiveRecord: 7.1ms | Allocations: 2602)
+
+
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 4.5ms | ActiveRecord: 7.0ms | Allocations: 3307)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 5.2ms | Allocations: 3884)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 18:11:35 -0400
+Started GET "/foods" for ::1 at 2020-08-15 18:11:35 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 18:11:35 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFarm Load (1.6ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  [1m[36mFood Load (1.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 1.6ms | Allocations: 2917)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.8ms | Allocations: 3178)
+
+
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 1.2ms | Allocations: 4275)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 18:11:40 -0400
+Started GET "/foods" for ::1 at 2020-08-15 18:11:40 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 18:11:40 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFarm Load (3.0ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 3.0ms | Allocations: 2586)
+
+
+  [1m[36mFood Load (12.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 16ms (Views: 2.8ms | ActiveRecord: 12.6ms | Allocations: 3529)
+
+
+  [1m[36mUser Load (17.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 19ms (Views: 0.2ms | ActiveRecord: 17.1ms | Allocations: 3988)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 18:11:47 -0400
+Started GET "/foods" for ::1 at 2020-08-15 18:11:47 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 18:11:47 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (3.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 3.6ms | Allocations: 1281)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFarm Load (27.2ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 31ms (Views: 3.5ms | ActiveRecord: 27.2ms | Allocations: 4013)
+
+
+  [1m[36mUser Load (37.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 40ms (Views: 0.4ms | ActiveRecord: 37.3ms | Allocations: 2582)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 18:12:01 -0400
+Started GET "/foods" for ::1 at 2020-08-15 18:12:01 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 18:12:01 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFarm Load (8.0ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  [1m[36mFood Load (7.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 14ms (Views: 5.4ms | ActiveRecord: 8.0ms | Allocations: 2923)
+
+
+Completed 200 OK in 14ms (Views: 6.4ms | ActiveRecord: 7.7ms | Allocations: 3349)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 2.4ms | Allocations: 3892)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 18:12:05 -0400
+Started GET "/foods" for ::1 at 2020-08-15 18:12:05 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 18:12:05 -0400
+Processing by FarmsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 874)
+
+
+Processing by FoodsController#index as HTML
+  [1m[36mFarm Load (96.1ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 99ms (Views: 2.5ms | ActiveRecord: 96.1ms | Allocations: 3561)
+
+
+  [1m[36mFood Load (92.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 95ms (Views: 2.6ms | ActiveRecord: 92.2ms | Allocations: 2989)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 18:12:10 -0400
+Started GET "/foods" for ::1 at 2020-08-15 18:12:10 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 18:12:10 -0400
+Processing by FarmsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFarm Load (2.3ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+Processing by FoodsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 2.3ms | Allocations: 3062)
+
+
+  [1m[36mFood Load (4.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 2484)
+
+
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 4.6ms | ActiveRecord: 4.0ms | Allocations: 3151)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 18:12:17 -0400
+Started GET "/foods" for ::1 at 2020-08-15 18:12:17 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 18:12:17 -0400
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFood Load (1.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+Processing by FarmsController#index as HTML
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 1.2ms | Allocations: 2136)
+
+
+  [1m[36mFarm Load (10.3ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 4.2ms | ActiveRecord: 10.3ms | Allocations: 2330)
+
+
+  [1m[36mUser Load (16.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 20ms (Views: 0.3ms | ActiveRecord: 16.5ms | Allocations: 4406)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 18:12:28 -0400
+Processing by FarmsController#index as HTML
+  [1m[36mFarm Load (0.2ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 1559)
+
+
+Started GET "/foods" for ::1 at 2020-08-15 18:12:28 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 18:12:28 -0400
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFood Load (2.9ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 2.9ms | Allocations: 1822)
+
+
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 3.9ms | Allocations: 2302)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 18:13:00 -0400
+Started GET "/foods" for ::1 at 2020-08-15 18:13:00 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 18:13:00 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+  [1m[36mFarm Load (2.2ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 2.2ms | Allocations: 2568)
+
+
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mFood Load (4.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 2.2ms | Allocations: 2524)
+
+
+Completed 200 OK in 11ms (Views: 6.6ms | ActiveRecord: 4.3ms | Allocations: 3897)
+
+
+Started GET "/foods" for ::1 at 2020-08-15 18:14:32 -0400
+Started GET "/farms" for ::1 at 2020-08-15 18:14:32 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 18:14:32 -0400
+Processing by FoodsController#index as HTML
+Processing by FarmsController#index as HTML
+  [1m[36mFood Load (1.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFarm Load (2.1ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 1.8ms | Allocations: 2636)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 2209)
+
+
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 2.1ms | Allocations: 4222)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 18:14:53 -0400
+Started GET "/foods" for ::1 at 2020-08-15 18:14:53 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 18:14:53 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFarm Load (24.7ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 28ms (Views: 3.0ms | ActiveRecord: 24.7ms | Allocations: 2454)
+
+
+  [1m[36mFood Load (23.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+  [1m[36mUser Load (23.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 30ms (Views: 5.4ms | ActiveRecord: 23.8ms | Allocations: 3024)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 32ms (Views: 0.3ms | ActiveRecord: 23.2ms | Allocations: 3943)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 18:14:57 -0400
+Started GET "/foods" for ::1 at 2020-08-15 18:14:57 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 18:14:57 -0400
+Processing by FarmsController#index as HTML
+  [1m[36mFarm Load (0.4ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.4ms | Allocations: 1559)
+
+
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFood Load (2.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 2.0ms | Allocations: 2288)
+
+
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 2062)
+
+
+Started GET "/foods" for ::1 at 2020-08-15 18:17:19 -0400
+Started GET "/farms" for ::1 at 2020-08-15 18:17:19 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 18:17:19 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFarm Load (1.9ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  [1m[36mFood Load (0.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 1.9ms | Allocations: 2932)
+
+
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.7ms | Allocations: 3349)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 2.3ms | Allocations: 3934)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 18:17:21 -0400
+Started GET "/foods" for ::1 at 2020-08-15 18:17:21 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 18:17:21 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFarm Load (3.5ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  [1m[36mFood Load (2.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 3.5ms | Allocations: 3709)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 2.7ms | Allocations: 3779)
+
+
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 4.0ms | Allocations: 3730)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 18:17:47 -0400
+Started GET "/foods" for ::1 at 2020-08-15 18:17:47 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 18:17:47 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFood Load (14.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 17ms (Views: 2.5ms | ActiveRecord: 14.1ms | Allocations: 1821)
+
+
+  [1m[36mUser Load (19.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 22ms (Views: 0.4ms | ActiveRecord: 19.1ms | Allocations: 2301)
+
+
+  [1m[36mFarm Load (24.3ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 28ms (Views: 3.3ms | ActiveRecord: 24.3ms | Allocations: 4623)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 18:17:57 -0400
+Started GET "/foods" for ::1 at 2020-08-15 18:17:57 -0400
+Processing by FoodsController#index as HTML
+Processing by FarmsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-08-15 18:17:57 -0400
+  [1m[36mFood Load (4.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 3.0ms | ActiveRecord: 4.8ms | Allocations: 2167)
+
+
+  [1m[36mFarm Load (5.7ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 10ms (Views: 3.6ms | ActiveRecord: 5.7ms | Allocations: 3688)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 1094)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 18:18:01 -0400
+Started GET "/foods" for ::1 at 2020-08-15 18:18:01 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 18:18:01 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFood Load (0.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  [1m[36mFarm Load (1.3ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.8ms | Allocations: 2342)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 2851)
+
+
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 1.3ms | Allocations: 4341)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 18:20:05 -0400
+Started GET "/foods" for ::1 at 2020-08-15 18:20:05 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 18:20:05 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 1.0ms | Allocations: 874)
+
+
+  [1m[36mFood Load (10.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 14ms (Views: 3.8ms | ActiveRecord: 10.4ms | Allocations: 2796)
+
+
+  [1m[36mFarm Load (21.1ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 23ms (Views: 1.8ms | ActiveRecord: 21.1ms | Allocations: 4979)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 20:35:25 -0400
+Started GET "/foods" for ::1 at 2020-08-15 20:35:25 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 20:35:25 -0400
+Processing by FarmsController#index as HTML
+  [1m[36mFarm Load (0.7ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.7ms | Allocations: 1977)
+
+
+Processing by AuthenticationController#verify as HTML
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (87.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 90ms (Views: 1.9ms | ActiveRecord: 87.7ms | Allocations: 1357)
+
+
+  [1m[36mUser Load (38.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 142ms (Views: 0.2ms | ActiveRecord: 53.3ms | Allocations: 2928)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 20:35:44 -0400
+Started GET "/foods" for ::1 at 2020-08-15 20:35:44 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 20:35:44 -0400
+Processing by FoodsController#index as HTML
+Processing by FarmsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFarm Load (2.7ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 2.7ms | Allocations: 2117)
+
+
+  [1m[36mFood Load (10.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 13ms (Views: 2.2ms | ActiveRecord: 10.4ms | Allocations: 4023)
+
+
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 40ms (Views: 0.3ms | ActiveRecord: 2.4ms | Allocations: 4041)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 20:36:13 -0400
+Started GET "/foods" for ::1 at 2020-08-15 20:36:13 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 20:36:13 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (50.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 52ms (Views: 0.2ms | ActiveRecord: 50.1ms | Allocations: 874)
+
+
+  [1m[36mFarm Load (67.9ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+  [1m[36mFood Load (67.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+Completed 200 OK in 72ms (Views: 3.7ms | ActiveRecord: 67.9ms | Allocations: 3587)
+
+
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 74ms (Views: 6.2ms | ActiveRecord: 67.3ms | Allocations: 4438)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 20:36:41 -0400
+Started GET "/foods" for ::1 at 2020-08-15 20:36:41 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 20:36:41 -0400
+Processing by FarmsController#index as HTML
+  [1m[36mFarm Load (3.3ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 3.3ms | Allocations: 1559)
+
+
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (1.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 1.7ms | Allocations: 1281)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (72.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 75ms (Views: 0.3ms | ActiveRecord: 72.3ms | Allocations: 874)
+
+
+Started GET "/foods" for ::1 at 2020-08-15 20:46:15 -0400
+Started GET "/farms" for ::1 at 2020-08-15 20:46:15 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 20:46:15 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 1.0ms | Allocations: 2469)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Processing by FarmsController#index as HTML
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 2726)
+
+
+  [1m[36mFarm Load (1.3ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 1.3ms | Allocations: 2171)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 20:46:43 -0400
+Started GET "/foods" for ::1 at 2020-08-15 20:46:43 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 20:46:43 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFarm Load (34.9ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 39ms (Views: 3.8ms | ActiveRecord: 34.9ms | Allocations: 2589)
+
+
+  [1m[36mFood Load (22.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 27ms (Views: 4.8ms | ActiveRecord: 22.0ms | Allocations: 3548)
+
+
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 27ms (Views: 0.2ms | ActiveRecord: 17.2ms | Allocations: 4041)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 20:46:50 -0400
+Started GET "/foods" for ::1 at 2020-08-15 20:46:50 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 20:46:50 -0400
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by FarmsController#index as HTML
+  [1m[36mFood Load (49.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+  [1m[36mFarm Load (18.9ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+Completed 200 OK in 52ms (Views: 2.7ms | ActiveRecord: 49.4ms | Allocations: 1971)
+
+
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 26ms (Views: 6.7ms | ActiveRecord: 18.9ms | Allocations: 2993)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 59ms (Views: 0.4ms | ActiveRecord: 50.2ms | Allocations: 4409)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 20:47:05 -0400
+Started GET "/foods" for ::1 at 2020-08-15 20:47:05 -0400
+Processing by FarmsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-08-15 20:47:05 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (2.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 2.6ms | Allocations: 1281)
+
+
+  [1m[36mFarm Load (29.5ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 33ms (Views: 2.6ms | ActiveRecord: 29.5ms | Allocations: 4272)
+
+
+  [1m[36mUser Load (8.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 8.9ms | Allocations: 1094)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 20:47:16 -0400
+Started GET "/foods" for ::1 at 2020-08-15 20:47:16 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 20:47:16 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.6ms | Allocations: 1281)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 874)
+
+
+  [1m[36mFarm Load (20.6ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 23ms (Views: 2.4ms | ActiveRecord: 20.6ms | Allocations: 4988)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 20:47:20 -0400
+Started GET "/foods" for ::1 at 2020-08-15 20:47:20 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (2.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  [1m[36mFarm Load (5.5ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 7.1ms | ActiveRecord: 5.5ms | Allocations: 3253)
+
+
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 2.8ms | Allocations: 1943)
+
+
+Started GET "/auth/verify" for ::1 at 2020-08-15 20:47:20 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 5.2ms | Allocations: 874)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 20:47:31 -0400
+Started GET "/foods" for ::1 at 2020-08-15 20:47:31 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 20:47:31 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFarm Load (1.8ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 1.8ms | Allocations: 2586)
+
+
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mFood Load (5.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 3.8ms | Allocations: 3218)
+
+
+Completed 200 OK in 11ms (Views: 5.4ms | ActiveRecord: 5.2ms | Allocations: 3891)
+
+
+Started GET "/foods" for ::1 at 2020-08-15 20:47:35 -0400
+Started GET "/farms" for ::1 at 2020-08-15 20:47:35 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 20:47:35 -0400
+Processing by FoodsController#index as HTML
+Processing by FarmsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFarm Load (7.7ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  [1m[36mUser Load (7.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 11ms (Views: 2.6ms | ActiveRecord: 7.7ms | Allocations: 2202)
+
+
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 7.6ms | Allocations: 2362)
+
+
+  [1m[36mFood Load (19.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 21ms (Views: 1.7ms | ActiveRecord: 19.0ms | Allocations: 4454)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 20:47:40 -0400
+Started GET "/foods" for ::1 at 2020-08-15 20:47:40 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 20:47:40 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+  [1m[36mFarm Load (1.6ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+  [1m[36mFood Load (2.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 1.6ms | Allocations: 2612)
+
+
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 2.1ms | Allocations: 3914)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 2.2ms | Allocations: 3281)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 20:47:47 -0400
+Started GET "/foods" for ::1 at 2020-08-15 20:47:47 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 20:47:47 -0400
+Processing by FoodsController#index as HTML
+Processing by FarmsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFood Load (2.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  [1m[36mFarm Load (2.6ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 2.6ms | Allocations: 3139)
+
+
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 2.8ms | Allocations: 3440)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 3.2ms | Allocations: 3950)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 20:47:50 -0400
+Processing by FarmsController#index as HTML
+  [1m[36mFarm Load (0.5ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.5ms | Allocations: 1559)
+
+
+Started GET "/foods" for ::1 at 2020-08-15 20:47:50 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.4ms | Allocations: 1318)
+
+
+Started GET "/auth/verify" for ::1 at 2020-08-15 20:47:50 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 874)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 20:47:53 -0400
+Started GET "/foods" for ::1 at 2020-08-15 20:47:53 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 20:47:53 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFarm Load (365.8ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 370ms (Views: 4.0ms | ActiveRecord: 365.8ms | Allocations: 2586)
+
+
+  [1m[36mFood Load (8.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  [1m[36mUser Load (7.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 14ms (Views: 5.0ms | ActiveRecord: 8.1ms | Allocations: 3638)
+
+
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 7.7ms | Allocations: 3769)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 20:48:04 -0400
+Started GET "/foods" for ::1 at 2020-08-15 20:48:04 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 20:48:04 -0400
+Processing by FarmsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFarm Load (4.3ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 3.4ms | ActiveRecord: 4.3ms | Allocations: 2099)
+
+
+Processing by FoodsController#index as HTML
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 5.4ms | Allocations: 3070)
+
+
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.6ms | Allocations: 2156)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 20:48:09 -0400
+Started GET "/foods" for ::1 at 2020-08-15 20:48:09 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 20:48:09 -0400
+Processing by FarmsController#index as HTML
+  [1m[36mFarm Load (0.8ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Processing by FoodsController#index as HTML
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.8ms | Allocations: 1919)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 5.2ms | Allocations: 933)
+
+
+  [1m[36mFood Load (10.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 13ms (Views: 2.4ms | ActiveRecord: 10.5ms | Allocations: 3007)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 20:48:13 -0400
+Started GET "/foods" for ::1 at 2020-08-15 20:48:13 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 20:48:13 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFarm Load (2.0ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 2.0ms | Allocations: 2586)
+
+
+  [1m[36mFood Load (6.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 10ms (Views: 3.7ms | ActiveRecord: 6.5ms | Allocations: 3996)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 5.9ms | Allocations: 3989)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 20:50:07 -0400
+Started GET "/foods" for ::1 at 2020-08-15 20:50:07 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 20:50:07 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (7.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 7.9ms | Allocations: 874)
+
+
+  [1m[36mFarm Load (27.0ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+  [1m[36mFood Load (26.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+Completed 200 OK in 30ms (Views: 3.2ms | ActiveRecord: 27.0ms | Allocations: 3581)
+
+
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 30ms (Views: 3.0ms | ActiveRecord: 26.4ms | Allocations: 4438)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 20:50:54 -0400
+Started GET "/foods" for ::1 at 2020-08-15 20:50:54 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 20:50:54 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+  [1m[36mFarm Load (94.5ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 100ms (Views: 5.2ms | ActiveRecord: 94.5ms | Allocations: 2445)
+
+
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 1.0ms | Allocations: 3504)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 1.9ms | Allocations: 2514)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 20:52:15 -0400
+Started GET "/foods" for ::1 at 2020-08-15 20:52:15 -0400
+Processing by FarmsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-08-15 20:52:15 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFarm Load (12.6ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 3.3ms | ActiveRecord: 12.6ms | Allocations: 2498)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFood Load (15.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 18ms (Views: 2.1ms | ActiveRecord: 15.4ms | Allocations: 4005)
+
+
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 2081)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 20:52:35 -0400
+Started GET "/foods" for ::1 at 2020-08-15 20:52:35 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-15 20:52:35 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.6ms | Allocations: 1830)
+
+
+Processing by FarmsController#index as HTML
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mFarm Load (0.4ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 0.7ms | ActiveRecord: 5.3ms | Allocations: 2420)
+
+
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.4ms | Allocations: 2314)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 20:52:43 -0400
+Processing by FarmsController#index as HTML
+  [1m[36mFarm Load (1.1ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+Started GET "/foods" for ::1 at 2020-08-15 20:52:43 -0400
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 1.1ms | Allocations: 1959)
+
+
+Started GET "/auth/verify" for ::1 at 2020-08-15 20:52:43 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.3ms | Allocations: 1821)
+
+
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 6.4ms | Allocations: 1639)
+
+
+Started GET "/foods" for ::1 at 2020-08-15 20:52:48 -0400
+Started GET "/farms" for ::1 at 2020-08-15 20:52:48 -0400
+Processing by FoodsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-08-15 20:52:48 -0400
+Processing by FarmsController#index as HTML
+  [1m[36mFood Load (3.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 3.8ms | Allocations: 1987)
+
+
+  [1m[36mFarm Load (4.9ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 15ms (Views: 9.7ms | ActiveRecord: 4.9ms | Allocations: 3544)
+
+
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 2.4ms | Allocations: 1858)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 21:00:57 -0400
+Started GET "/foods" for ::1 at 2020-08-15 21:00:57 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+  [1m[36mFarm Load (2.1ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  [1m[36mFood Load (1.9ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 4.1ms | ActiveRecord: 2.1ms | Allocations: 2404)
+
+
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 1.9ms | Allocations: 2882)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 21:01:02 -0400
+Started GET "/foods" for ::1 at 2020-08-15 21:01:02 -0400
+Processing by FarmsController#index as HTML
+  [1m[36mFarm Load (5.6ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 2.4ms | ActiveRecord: 5.6ms | Allocations: 1559)
+
+
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.9ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.9ms | Allocations: 1281)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 21:01:31 -0400
+Started GET "/foods" for ::1 at 2020-08-15 21:01:31 -0400
+Processing by FoodsController#index as HTML
+Processing by FarmsController#index as HTML
+  [1m[36mFarm Load (0.3ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 1559)
+
+
+  [1m[36mFood Load (11.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 14ms (Views: 2.6ms | ActiveRecord: 11.2ms | Allocations: 3114)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 21:01:48 -0400
+Started GET "/foods" for ::1 at 2020-08-15 21:01:48 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1281)
+
+
+  [1m[36mFarm Load (10.2ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 4.5ms | ActiveRecord: 10.2ms | Allocations: 3108)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 21:02:20 -0400
+Started GET "/foods" for ::1 at 2020-08-15 21:02:20 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+  [1m[36mFarm Load (1.2ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+  [1m[36mFood Load (1.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 1.2ms | Allocations: 2058)
+
+
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 1.1ms | Allocations: 2993)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 21:02:40 -0400
+Started GET "/foods" for ::1 at 2020-08-15 21:02:40 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+  [1m[36mFarm Load (15.0ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 18ms (Views: 3.0ms | ActiveRecord: 15.0ms | Allocations: 2046)
+
+
+  [1m[36mFood Load (11.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 15ms (Views: 3.3ms | ActiveRecord: 11.4ms | Allocations: 2968)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 21:03:38 -0400
+Started GET "/foods" for ::1 at 2020-08-15 21:03:38 -0400
+Processing by FoodsController#index as HTML
+Processing by FarmsController#index as HTML
+  [1m[36mFarm Load (0.4ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 1559)
+
+
+  [1m[36mFood Load (7.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 1.5ms | ActiveRecord: 7.1ms | Allocations: 3473)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 21:03:41 -0400
+Started GET "/foods" for ::1 at 2020-08-15 21:03:41 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+  [1m[36mFarm Load (0.7ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.7ms | Allocations: 1682)
+
+
+  [1m[36mFood Load (3.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 2.2ms | ActiveRecord: 3.7ms | Allocations: 2990)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 21:03:56 -0400
+Started GET "/foods" for ::1 at 2020-08-15 21:03:56 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+  [1m[36mFarm Load (0.5ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+  [1m[36mFood Load (0.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.5ms | Allocations: 1701)
+
+
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.8ms | Allocations: 2930)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 21:06:39 -0400
+Started GET "/foods" for ::1 at 2020-08-15 21:06:39 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+  [1m[36mFarm Load (0.7ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+  [1m[36mFood Load (0.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.7ms | Allocations: 2067)
+
+
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.7ms | Allocations: 2897)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 21:12:29 -0400
+Started GET "/foods" for ::1 at 2020-08-15 21:12:29 -0400
+Processing by FarmsController#index as HTML
+  [1m[36mFarm Load (2.7ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 2.7ms | Allocations: 1975)
+
+
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (1.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 1.1ms | Allocations: 1339)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 21:12:30 -0400
+Started GET "/foods" for ::1 at 2020-08-15 21:12:30 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (1.9ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 1.9ms | Allocations: 1281)
+
+
+Processing by FarmsController#index as HTML
+  [1m[36mFarm Load (2.7ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 2.7ms | Allocations: 1559)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 21:12:39 -0400
+Processing by FarmsController#index as HTML
+  [1m[36mFarm Load (0.2ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 1559)
+
+
+Started GET "/foods" for ::1 at 2020-08-15 21:12:39 -0400
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (1.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 1.2ms | Allocations: 1281)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 21:25:54 -0400
+Started GET "/foods" for ::1 at 2020-08-15 21:25:54 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+  [1m[36mFarm Load (0.9ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.9ms | Allocations: 2098)
+
+
+  [1m[36mFood Load (3.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 3.9ms | ActiveRecord: 3.8ms | Allocations: 3081)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 21:26:08 -0400
+Started GET "/foods" for ::1 at 2020-08-15 21:26:08 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (1.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 1.1ms | Allocations: 1281)
+
+
+  [1m[36mFarm Load (10.3ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 2.6ms | ActiveRecord: 10.3ms | Allocations: 3114)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 21:29:25 -0400
+Started GET "/foods" for ::1 at 2020-08-15 21:29:25 -0400
+Processing by FoodsController#index as HTML
+Processing by FarmsController#index as HTML
+  [1m[36mFood Load (1.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  [1m[36mFarm Load (0.6ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 1.8ms | Allocations: 2418)
+
+
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.6ms | Allocations: 2766)
+
+
+Started GET "/farms" for ::1 at 2020-08-15 21:29:37 -0400
+Started GET "/foods" for ::1 at 2020-08-15 21:29:37 -0400
+Processing by FarmsController#index as HTML
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (4.9ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:9:in `index'
+  [1m[36mFarm Load (106.4ms)[0m  [1m[34mSELECT "farms".* FROM "farms"[0m
+Completed 200 OK in 8ms (Views: 2.3ms | ActiveRecord: 4.9ms | Allocations: 1301)
+
+
+  ↳ app/controllers/farms_controller.rb:8:in `index'
+Completed 200 OK in 111ms (Views: 3.9ms | ActiveRecord: 106.4ms | Allocations: 3416)
+
+
+Started POST "/auth/login" for ::1 at 2020-08-15 21:30:35 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"admin", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 262ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 1034)
+
+
+Started GET "/auth/verify" for ::1 at 2020-08-15 21:30:36 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 877)
+
+
