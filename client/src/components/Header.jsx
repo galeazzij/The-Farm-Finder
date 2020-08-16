@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { removeToken } from '../services/auth';
 import { useHistory } from 'react-router-dom';
+import { Container, Row, Col } from 'react-bootstrap'
+import Home from '../screens/Home'
 
 export default function Header(props) {
   const history = useHistory();
@@ -13,28 +15,42 @@ export default function Header(props) {
     history.push('/');
   }
   return (
-    <header>
-      <h1>The Farm Finder</h1>
-      {
+    <>
+      <Container>
+      <Row>
+        <Col><h1>The Farm Finder</h1></Col>
+        <Col></Col>
+        <Col> {
         props.currentUser ? (
           <>
-            <p>{props.currentUser.username}</p>
+            <p>Welcome {props.currentUser.username}</p>
             <button onClick={handleLogout}>Logout</button>
           </>
         ) : (
             <Link to='/login'>Login/Register</Link>
         )
 
-      }
+        }
 
-      <hr />
-     { props.currentUser && (
-      <>
-        <Link to="/foods">Foods</Link>
-        <Link to="/farms">Farms</Link>
-      </>
-      )
-      }
-    </header>
+     
+            {/* {props.currentUser && (
+              <h5>test holder</h5>
+      // <>
+      //   <Link to="/foods">Foods</Link>
+      //   <Link to="/farms">Farms</Link>
+      // </>
+      ) */}
+          
+        </Col>
+        
+      </Row>
+      
+      
+     
+      </Container>
+    </>
+    
+
+    
   )
 }

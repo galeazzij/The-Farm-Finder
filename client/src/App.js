@@ -4,6 +4,7 @@ import Main from './components/Main'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { verifyUser } from './services/auth';
 import NavBar from './components/NavBar';
+import { Container } from 'react-bootstrap';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -19,7 +20,7 @@ function App() {
   
 
   return (
-    <div className="App">
+    <Container className="App">
       <Header
         currentUser={currentUser}
         setCurrentUser={setCurrentUser}
@@ -28,8 +29,10 @@ function App() {
         currentUser={currentUser}
         setCurrentUser={setCurrentUser}
       />
-      <Main setCurrentUser={setCurrentUser}/>
-    </div>
+      <Main
+        currentUser={currentUser}
+        setCurrentUser={setCurrentUser} />
+    </Container>
   );
 }
 
