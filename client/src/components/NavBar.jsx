@@ -1,9 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import {Navbar, Nav, NavDropdown, Form, FormControl, Button} from 'react-bootstrap'
 
 
 
-export default function NavBar() {
+export default function NavBar(props) {
   return (
     <>
       <Navbar bg="light" expand="lg">
@@ -13,11 +14,20 @@ export default function NavBar() {
     <Nav className="mr-auto">
       <Nav.Link href="/">Home</Nav.Link>
       <Nav.Link href="#link">Link</Nav.Link>
-      <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-        <NavDropdown.Item href="/foods">Food</NavDropdown.Item>
+            <NavDropdown title="Dropdown" id="basic-nav-dropdown">{
+              props.currentUser ? (
+              <>
+               <NavDropdown.Item href="/foods">Food</NavDropdown.Item>
         <NavDropdown.Item href="/farms">Farms</NavDropdown.Item>
         <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item> 
+                </>
+              ) : (
+                  <Link to='/login'>Login/Register</Link>
+              )
+              
+      }
+        
       </NavDropdown>
     </Nav>
     <Form inline>

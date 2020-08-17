@@ -21,10 +21,11 @@ export default function ShowFoods(props) {
           <Card style={{ width: "18rem" }}>
               {/* <Card.Img variant="top" src='./holder.png' />  Saved for future img use */}
               <Card.Body>
-                <Card.Title><Link to={`/foods/${foodItem.id}`}>{foodItem.name}</Link></Card.Title>
-                <Card.Text>
+              <Card.Title><Link to={`/foods/${foodItem.id}`}>{foodItem.name}</Link></Card.Title>
+              {/* Maybe map through the Joins table to show the Foods where the ID's match */}
+                <Card.Text>  
                   See the foods you've created and the farms where you can find
-                  them!
+                  them
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
@@ -39,10 +40,6 @@ export default function ShowFoods(props) {
                 </Button>
               </Card.Footer>
             </Card>
-          {/* href="/foods" variant="primary" */}
-          
-          
-          {/* <br/> */}
         </>
       ))}
       </CardDeck>
