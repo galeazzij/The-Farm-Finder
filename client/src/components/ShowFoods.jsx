@@ -40,10 +40,6 @@ export default function ShowFoods(props) {
                 </Button>
               </Card.Footer>
             </Card>
-          {/* href="/foods" variant="primary" */}
-          
-          
-          {/* <br/> */}
         </>
       ))}
       </CardDeck>
