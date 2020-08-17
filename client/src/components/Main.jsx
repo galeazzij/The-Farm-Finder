@@ -54,6 +54,7 @@ export default function Main(props) {
        <Route exact path='/farms' render={() =>
         (<ShowFarms 
           farms={farms}
+          foods={foods}
         />
         )} />
        <Route exact path='/farms/:id' render={(props) =>
