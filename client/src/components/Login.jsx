@@ -61,31 +61,6 @@ export default function Login(props) {
           </Form.Group>
         </Form>
       </Container>
-      {/* <form onSubmit={handleSubmit}>
-      <h3>Login</h3>
-      <label>
-        Username:
-        <input
-          type="text"
-          name="username"
-          value={formData.username}
-          onChange={handleChange}
-        />
-      </label>
-
-      <label>
-        Password:
-        <input
-          type="password"
-          name="password"
-          value={formData.password}
-          onChange={handleChange}
-        />
-      </label>
-
-      <Link to='/register'>Register</Link>
-      <button>Submit</button>
-    </form> */}
     </>
   );
 }
