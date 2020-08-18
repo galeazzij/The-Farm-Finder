@@ -1,5 +1,7 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
+import {Link} from 'react-router-dom'
 import { registerUser } from '../services/auth';
+import {Container, Form, Button} from 'react-bootstrap'
 
 export default function Register(props) {
   const [formData, setFormData] = useState({
@@ -24,38 +26,54 @@ export default function Register(props) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h3>Register</h3>
-      <label>
-        Username:
-        <input
-          type="text"
-          name="username"
-          value={formData.username}
-          onChange={handleChange}
-        />
-      </label>
+    <>
+      <Container className="align-items-center" style={{ width: "20rem" }}>
+        <Form onSubmit={handleSubmit}>
+          <Form.Group controlId="formBasicUsername">
+            <Form.Label>Username</Form.Label>
+            <Form.Control
+              type="text"
+              name="username"
+              placeholder="Enter username"
+              value={formData.username}
+              onChange={handleChange}
+            />
+          </Form.Group>
 
-      <label>
-        Email:
-        <input
-          type="text"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-        />
-      </label>
+          <Form.Group controlId="formBasicEmail">
+            <Form.Label>Email</Form.Label>
+            <Form.Control
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={formData.email}
+              onChange={handleChange}
+            />
+          </Form.Group>
 
-      <label>
-        Password:
-        <input
-          type="password"
-          name="password"
-          value={formData.password}
-          onChange={handleChange}
-        />
-      </label>
-      <button>Submit</button>
-    </form>
+          <Form.Group controlId="formBasicPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={formData.password}
+              onChange={handleChange}
+            />
+          </Form.Group>
+
+          <Button variant="primary" type="submit">
+            Submit
+          </Button>
+          <Form.Group>
+            <Form.Label>Already Have An Account?</Form.Label>
+            <Form.Text>
+              <Link to="/login">Login Here</Link>
+            </Form.Text>
+          </Form.Group>
+        </Form>
+      </Container>
+    </>
+    
   );
 }
