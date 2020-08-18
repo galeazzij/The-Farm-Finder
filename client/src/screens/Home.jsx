@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import food from "../images/food_image.jpg";
 import farm from "../images/farm_image.jpg";
-import { Link } from "react-router-dom";
 
 import { Container, Card, Button, CardDeck } from "react-bootstrap";
 import { verifyUser } from "../services/auth";
+import Login from "../components/Login";
 
 export default function Home(props) {
   const [currentUser, setCurrentUser] = useState(null);
@@ -56,7 +56,7 @@ export default function Home(props) {
           </CardDeck>
         </>
       ) : (
-        <Link to="/login">Login/Register</Link>
+          <Login to="/login" />
       )}
     </Container>
   );
