@@ -43,6 +43,7 @@ export default function Main(props) {
         )} />
       <Route path='/login' render={(props) =>
         (<Login {...props}
+          currentUser={currentUser}
           setCurrentUser={setCurrentUser}
         />
         )} />

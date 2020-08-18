@@ -20,14 +20,18 @@ export default function Login(props) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const userData = await loginUser(formData);
-    props.setCurrentUser(userData);
-    props.history.push("/");
+    console.log(formData)
+    console.log(userData)
+    
+   props.setCurrentUser(userData);
+   props.history.push("/");
+    console.log(props.currentUser)
   };
 
   return (
     <>
       <Container className="align-items-center" style={{ width: "20rem" }}>
-        <Form onSubmit={handleSubmit}>
+        <Form>
           <Form.Group controlId="formBasicUsername">
             <Form.Label>Username</Form.Label>
             <Form.Control
@@ -50,7 +54,7 @@ export default function Login(props) {
             />
           </Form.Group>
 
-          <Button variant="primary" type="submit">
+          <Button variant="primary" type="submit" onClick={handleSubmit}>
             Submit
           </Button>
           <Form.Group>
