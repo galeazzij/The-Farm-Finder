@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import {Link} from 'react-router-dom'
 import food from "../images/food_image.jpg";
 import farm from "../images/farm_image.jpg";
 
@@ -33,9 +34,10 @@ export default function Home(props) {
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
-                <Button href="/foods" variant="primary">
+                <Link to="/foods"><Button variant="primary">
                   Click Here
-                </Button>
+                </Button></Link>
+                
               </Card.Footer>
             </Card>
 
