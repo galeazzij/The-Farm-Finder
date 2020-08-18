@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import {Link} from 'react-router-dom'
 import { readOneFood, addFarm } from '../services/foods'
 
 export default function FoodItem(props) {
@@ -32,7 +33,7 @@ export default function FoodItem(props) {
           <>
               <h3>{food.name}</h3>
             {food.farms.map((farm) => (
-              <p key={farm.id}>{farm.name}</p>
+              <Link to={`/farms/${farm.id}`}><p key={farm.id}>{farm.name}</p></Link>
             ))}
             
             <form onSubmit={handleSubmit}>
