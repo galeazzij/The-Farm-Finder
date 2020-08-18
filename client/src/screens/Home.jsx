@@ -50,9 +50,10 @@ export default function Home(props) {
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
-                <Button href="/farms" variant="primary">
+                <Link to='/farms'> <Button variant="primary">
                   Click Here
-                </Button>
+                </Button></Link>
+               
               </Card.Footer>
             </Card>
           </CardDeck>
