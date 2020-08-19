@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import {Container, Card} from 'react-bootstrap'
 import {readOneFarm} from '../services/farms'
 
 export default function ShowOneFarm(props) {
@@ -17,13 +18,15 @@ export default function ShowOneFarm(props) {
     <div>
       {farm &&
         <>
-        <p>{farm.name}</p>
-        <p>{farm.address}</p>
-        <p>{farm.city}{', '}{farm.state}{' '}{farm.zipcode}</p>
-        <p>{farm.phone}</p>
+        <Container className="align-items-center" style={{width: "20rem"}}  >
+          <Card>
+            <Card.Title><h3>{farm.name}</h3></Card.Title>
+            <Card.Subtitle><p>{farm.address}</p></Card.Subtitle>
+            <Card.Subtitle> <p>{farm.city}{', '}{farm.state}{' '}{farm.zipcode}</p></Card.Subtitle>
+            <Card.Subtitle><p>{farm.phone}</p></Card.Subtitle>
+          </Card>
+        </Container>
         </>
-
-        
       }
     </div>
   )
